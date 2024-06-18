@@ -5,11 +5,50 @@ File templates
 
 How to add a new template
 
-Open **Android Studio** and go for **File** → **Settings** → **Editor** → **File and Code Templates**. Or you can search in the Search box to get it directly
-
-By clicking plus in the top right corner, you can add your group of templates or a template to an existing category.
+Open **Android Studio** and go for **File** → **Settings** → **Editor** → **File and Code Templates**. Or you can search in the **Search box** to get it directly.
 
 
+![alt text](https://github.com/beobanhbo/flutter_project_template/blob/main/Screenshot%202024-06-18%20at%2023.13.39.png)
+
+By clicking plus in the top left corner, you can create your templates. Input the name of it and the file extension that it will be created. In this case we are creating a **Dart file**, so the **Extension field** will be _**dart**_.
+
+![alt text](https://github.com/beobanhbo/flutter_project_template/blob/main/Screenshot%202024-06-18%20at%2023.17.34.png)
+
+For example, i want to create a template like this:
+
+![alt text](https://github.com/beobanhbo/flutter_project_template/blob/main/Screenshot%202024-06-18%20at%2023.25.08.png)
+
+I named **"_Example to create Dart template file_"**, with extension is **_dart_**. Then input the content you want to generate in the box right below. I will set it "// Hello". Don't forget to save it.
+
+When it done, go to a folder/ directory you want to create that file. **Right click** → **New**, you will see the _**Example to create Dart template file**_ option. Select it, set a name and click **OK** to create it.
+
+![alt text](https://github.com/beobanhbo/flutter_project_template/blob/main/Screenshot%202024-06-18%20at%2023.30.02.png)
+
+As you can see, a file will be created:
+
+![alt text](https://github.com/beobanhbo/flutter_project_template/blob/main/Screenshot%202024-06-18%20at%2023.36.34.png)
+
+Create content for template
+
+In file templates, you can use text, code, comments, and predefined variables. A list of predefined variables is available below. When you use these variables in templates, they expand into corresponding values later in the editor.  It is also possible to specify custom variables. Custom variables use the following format: **${VARIABLE_NAME}**, where **VARIABLE_NAME** is a name for your variable (for example, **${MY_CUSTOM_FUNCTION_NAME}**). Before the IDE creates a new file with custom variables, you see a dialog where you can define values for custom variables in the template.
+
+This is a list of predefined variables that Android Studio created.
+
+| Predefined variable |Explain  |
+|--|--|
+| ${DAY} |Current day of the month  |
+| ${DAY_NAME_SHORT} |First three letters of the current day name (Mon, Tue, and so on)|
+| ${DAY_NAME_FULL} |Full name of the current day (Monday, Tuesday, and so on)|
+| ${DIR_PATH} |Path to the directory of the new file (relative to the project root)|
+| ${FILE_NAME} |Name of the new file|
+| ${HOUR} |Current hour|
+| ${MINUTE} |Current minute|
+| ${SECOND} |Current second|
+| ${NAME} |Name of the new entity (file, type, interface, and so on)|
+
+
+
+![alt text](https://github.com/beobanhbo/flutter_project_template/blob/main/Screenshot%202024-06-18%20at%2023.36.34.png)
 This is a collections flutter file template that used for setup in Android Studio File Template
 1. Create file with class name
      ```
