@@ -47,8 +47,36 @@ This is a list of predefined variables that Android Studio created.
 | ${NAME} |Name of the new entity (file, type, interface, and so on)|
 
 
+I will create a template to create a class. Check this code below:
 
-![alt text](https://github.com/beobanhbo/flutter_project_template/blob/main/Screenshot%202024-06-18%20at%2023.36.34.png)
+![alt text](https://github.com/beobanhbo/flutter_project_template/blob/main/Screenshot%202024-06-18%20at%2023.56.18.png)
+
+After choose the template, set the name and see the result.
+
+![alt text](https://github.com/beobanhbo/flutter_project_template/blob/main/Screenshot%202024-06-18%20at%2023.59.09.png)
+
+The file name will be set as class name:
+
+![alt text](https://github.com/beobanhbo/flutter_project_template/blob/main/Screenshot%202024-06-19%20at%2000.01.51.png)
+
+But, the is one thing seems not good. Exactly, the class name is not in right format, it should be **"DemoCreateClassFile"**. So, lets update our template with this code below:
+
+```
+#set( $nameparts = $NAME.split("_"))
+#set( $namepart = '')
+#set( $classname = '')
+#foreach( $namepart in $nameparts )
+    #set( $classname = $classname + $namepart.substring(0, 1).toUpperCase() + $namepart.substring(1))
+#end
+
+class ${classname} {}
+```
+
+ And tada!!!, everything looks good now.
+ 
+![alt text]( https://github.com/beobanhbo/flutter_project_template/blob/main/Screenshot%202024-06-19%20at%2000.06.33.png)
+
+
 This is a collections flutter file template that used for setup in Android Studio File Template
 1. Create file with class name
      ```
