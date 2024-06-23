@@ -181,4 +181,26 @@ This is a collections flutter file template that used for setup in Android Studi
    class Loading${classname} extends ${classname}{}
    class Error${classname} extends ${classname}{}
    ```
-3. # **awdawd**
+# **II. Live template**
+
+ Using Live templates to insert common constructs into your code, such as loops, conditions, declarations, or print statements.
+ 
+To expand a code snippet, type the corresponding template abbreviation and press **Tab**. Keep pressing **Tab** to jump from one variable in the template to the next one. Press 
+**LShift** and **Tab** to move to the previous variable.
+
+**Types of live templates**
+
+- **Simple templates**: contain only fixed plain text. When you expand a simple template, the text is automatically inserted into your source code, replacing the abbreviation. Ex: Type **sout** then press **Tab**, IDE will add the code like this **print();** then you can insert the text in the brace
+
+- **Parameterized templates**: contain variables that enable user input. When you expand a parameterized template, variables are either replaced by input fields for the user to specify manually, or calculated by IntelliJ IDEA automatically. Ex: Type **fori** then press **Tab**, IDE will add the code like this :
+
+    ```
+    for (int i = 0; i < ; i++) {
+    
+    }
+    ```
+
+**Configure live templates**
+
+Open **Android Studio** and go for **File** → **Settings** → **Editor** → **Live Templates**. Or you can search in the **Search box** to get it directly.
+
