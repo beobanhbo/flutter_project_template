@@ -277,7 +277,7 @@ void $var$()async{
 }
 ```
 
-**7. Create void function with async**
+**7. Create ValueListenableBuilder**
 
 ```
  ValueListenableBuilder(
@@ -288,3 +288,19 @@ void $var$()async{
             ),
 
 ```
+
+**8. Create StreamBuilder**
+
+```
+ StreamBuilder(
+              stream: $var$,
+              builder:
+                  (BuildContext context, AsyncSnapshot<dynamic> snapshot) {
+                if (!snapshot.hasData) return const SizedBox();
+                return $END$
+              },
+            ),
+
+```
+
+
