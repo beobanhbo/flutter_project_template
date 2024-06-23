@@ -270,10 +270,21 @@ listener: (context, state) {
               },
             ),
 ```
-**5. Create void function with async**
+**6. Create void function with async**
 
 ```
 void $var$()async{
 }
 ```
 
+**7. Create void function with async**
+
+```
+ ValueListenableBuilder(
+              valueListenable: $value$,
+              builder: (BuildContext context, value, Widget? child) {
+                return $END$
+              },
+            ),
+
+```
