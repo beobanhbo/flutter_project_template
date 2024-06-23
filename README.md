@@ -1,9 +1,9 @@
 # Flutter Project Template
 This article is intended to introduce Android Studio Code Template and Live code as well as how to use it in real projects. This will increase your working efficiency as well as avoid having to repeat the same action many times - something that should be avoided in programming.
 
-File templates
+**I. File templates**
 
-How to add a new template
+**How to add a new template**
 
 Open **Android Studio** and go for **File** → **Settings** → **Editor** → **File and Code Templates**. Or you can search in the **Search box** to get it directly.
 
@@ -28,7 +28,7 @@ As you can see, a file will be created:
 
 ![alt text](https://github.com/beobanhbo/flutter_project_template/blob/main/Screenshot%202024-06-18%20at%2023.36.34.png)
 
-Create content for template
+**Create content for template**
 
 In file templates, you can use text, code, comments, and predefined variables. A list of predefined variables is available below. When you use these variables in templates, they expand into corresponding values later in the editor.  It is also possible to specify custom variables. Custom variables use the following format: **${VARIABLE_NAME}**, where **VARIABLE_NAME** is a name for your variable (for example, **${MY_CUSTOM_FUNCTION_NAME}**). Before the IDE creates a new file with custom variables, you see a dialog where you can define values for custom variables in the template.
 
@@ -78,8 +78,9 @@ class ${classname} {}
 
 
 This is a collections flutter file template that used for setup in Android Studio File Template
-1. Create file with class name
-     ```
+
+**1. Create file with class name**
+
        #set( $nameparts = $NAME.split("_"))
        #set( $namepart = '')
        #set( $classname = '')
@@ -88,16 +89,60 @@ This is a collections flutter file template that used for setup in Android Studi
        #end
        
        class ${classname} {}
-      ```
-      This code will create a file with your input and also generate a class named the same as your file
-      Ex: When you create a file named: main_file.dart. The result will be:
-      ```
+    
+      
+  This code will create a file with your input and also generate a class named the same as your file
+  Ex: When you create a file named: main_file.dart. The result will be:
+  
+
       class MainFile {}
-      ```
-3. 
-1. Cubit template
-   1.1 **Cubit**
-     ```
+**2. Create file with abstract class name**
+
+       #set( $nameparts = $NAME.split("_"))
+       #set( $namepart = '')
+       #set( $classname = '')
+       #foreach( $namepart in $nameparts )
+           #set( $classname = $classname + $namepart.substring(0, 1).toUpperCase() + $namepart.substring(1))
+       #end
+       
+      abstract class ${classname} {}
+      
+**3. Create enum file**
+
+       #set( $nameparts = $NAME.split("_"))
+       #set( $namepart = '')
+       #set( $classname = '')
+       #foreach( $namepart in $nameparts )
+           #set( $classname = $classname + $namepart.substring(0, 1).toUpperCase() + $namepart.substring(1))
+       #end
+       
+      enum ${classname} {}     
+**4. Create mixin file**
+
+       #set( $nameparts = $NAME.split("_"))
+       #set( $namepart = '')
+       #set( $classname = '')
+       #foreach( $namepart in $nameparts )
+           #set( $classname = $classname + $namepart.substring(0, 1).toUpperCase() + $namepart.substring(1))
+       #end
+       
+      mixin ${classname} {}  
+
+**5. Create extension file**
+
+    #set( $nameparts = $NAME.split("_"))
+    #set( $namepart = '')
+    #set( $classname = '')
+    #foreach( $namepart in $nameparts )
+        #set( $classname = $classname + $namepart.substring(0, 1).toUpperCase() + $namepart.substring(1))
+    #end
+    #set( $datatype = $DATA_TYPE)
+    extension ${classname} on ${datatype}{}
+
+**6. Cubit template**
+
+   **6.1 Cubit**
+
           #set( $nameparts = $NAME.split("_"))
           #set( $namepart = '')
           #set( $classname = '')
@@ -113,13 +158,16 @@ This is a collections flutter file template that used for setup in Android Studi
           class ${classname} extends Cubit<${stateclassname}State>{
           
           }
-    ```
-     Ex: When you create a file named: demo_cubit.dart. The result will be:
+   
+ 
+ Ex: When you create a file named: demo_cubit.dart. The result will be:
    ```
    class DemoCubit extends Cubit<DemoState>{}
    ```
-   1.2 **State**
+**6.2 State**
+
    I created a basic state in Cubit. That included **Init**, **Loading** and **Error** state 
+   
    ```
    #set( $nameparts = $NAME.split("_"))
    #set( $namepart = '')
