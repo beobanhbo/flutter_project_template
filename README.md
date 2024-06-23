@@ -204,3 +204,19 @@ To expand a code snippet, type the corresponding template abbreviation and press
 
 Open **Android Studio** and go for **File** → **Settings** → **Editor** → **Live Templates**. Or you can search in the **Search box** to get it directly.
 
+![alt text](https://github.com/beobanhbo/flutter_project_template/blob/main/Screenshot%202024-06-23%20at%2022.39.25.png)
+
+
+**Create live templates**
+- Select the template group where you want to create a new live template
+- Click the Add button and select Live Template
+![alt text](https://github.com/beobanhbo/flutter_project_template/blob/main/Screenshot%202024-06-23%20at%2022.43.02.png)
+- Specify the context in which the template will be available. By default, no context is specified and IntelliJ IDEA displays a message at the bottom of the dialog:
+
+- Click Define below the message and select the checkboxes next to applicable contexts
+- In the Abbreviation field, specify the characters that will be used to expand the template. For example: todo.
+- In the Template text field, specify the body of the template with variables.
+- Apply all your changes.
+![alt text](https://github.com/beobanhbo/flutter_project_template/blob/main/Screenshot%202024-06-23%20at%2022.43.02.png)
+
+
