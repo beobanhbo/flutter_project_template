@@ -214,9 +214,66 @@ Open **Android Studio** and go for **File** → **Settings** → **Editor** → 
 - Specify the context in which the template will be available. By default, no context is specified and IntelliJ IDEA displays a message at the bottom of the dialog:
 
 - Click Define below the message and select the checkboxes next to applicable contexts
+
+![alt text](https://github.com/beobanhbo/flutter_project_template/blob/main/Screenshot%202024-06-23%20at%2022.43.02.png)
+
 - In the Abbreviation field, specify the characters that will be used to expand the template. For example: todo.
 - In the Template text field, specify the body of the template with variables.
 - Apply all your changes.
-![alt text](https://github.com/beobanhbo/flutter_project_template/blob/main/Screenshot%202024-06-23%20at%2022.43.02.png)
 
+This is a collections flutter file template that used for setup in Android Studio File Template
+
+**1. Create a Try- Catch**
+```
+try{
+
+}
+catch(e,s){
+
+}
+
+```
+
+**2. Create SizedBox with Height**
+
+```
+const SizedBox(height: $VAR$),
+```
+
+**3. Create SizedBox with Width**
+
+```
+const SizedBox(width: $VAR$),
+```
+
+**4. Create BLoc Consumer**
+
+```
+BlocConsumer(
+bloc: $var$,
+listener: (context, state) {
+    
+    },
+    builder:   (context, state) {
+        $END$
+    },
+
+),
+```
+
+**5. Create Gesture Detector with onTap**
+
+```
+  GestureDetector(
+              onTap: () {
+                $function$();
+              },
+            ),
+```
+**5. Create void function with async**
+
+```
+void $var$()async{
+}
+```
 
